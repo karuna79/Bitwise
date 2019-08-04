@@ -1,0 +1,8 @@
+unsigned int numSetBits(unsigned int x) {
+            unsigned int total_ones = 0;
+            while (x != 0) {
+                x = x & (x-1);
+                total_ones++;
+            }
+            return total_ones;
+        }
