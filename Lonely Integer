@@ -1,0 +1,13 @@
+You will be given an array of integers. All of the integers except one occur twice. That one is unique in the array.
+
+Given an array of integers, find and print the unique element.
+
+
+int lonelyinteger(int a_count, int* a) {
+int lonely=a[0];
+for(int i=1;i<a_count;i++)
+{
+    lonely=lonely^a[i];
+}
+return lonely;
+}
