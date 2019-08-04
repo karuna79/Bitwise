@@ -1,0 +1,5 @@
+You will be given a list of 32 bit unsigned integers. Flip all the bits ( and ) and print the result as an unsigned integer.
+long flippingBits(unsigned long n) {
+long a=4294967295; //largest 32 bit no
+return a-n;
+}
