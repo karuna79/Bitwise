@@ -1,0 +1,17 @@
+Given an array of N integers, find the pair of integers in the array which have minimum XOR value. Report the minimum XOR value.
+int comp(const void* a, const void* b)
+{
+    return *(int*)a-*(int*)b;
+}
+int findMinXor(int* A,int n1)
+{
+    qsort(A,n1,sizeof(int),comp);
+    int x=A[0]^A[1];
+    int i;
+    for(i=2;i<n1;i++)
+    {
+    if((A[i-1]^A[i])<x)
+    x=A[i-1]^A[i];
+    }
+    return x;
+}
